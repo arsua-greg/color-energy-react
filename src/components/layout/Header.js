@@ -1,16 +1,8 @@
-import LoginButton from "../LoginButton";
-import { useUser } from "@auth0/nextjs-auth0/client";
-import Logoutbutton from "../LogoutButton";
-
 export default function Header() {
-  const { user } = useUser();
-
   return (
-    <header className="container mx-auto pt-3">
-      <nav className="flex justify-between items-center">
-        <h1>Logo</h1>
-        <div>{user ? <Logoutbutton /> : <LoginButton />}</div>
-      </nav>
+    <header className="border-t-4 border-b border-[#04512A] flex items-center justify-center">
+      <div className="logo">LOGO</div>
+      <h1 className="text-center font-bold text-xl py-5 w-[512px]">来店予約</h1>
     </header>
   );
 }
