@@ -1,0 +1,11 @@
+-GTM
+https://qiita.com/seya/items/d4108d28ee5b1773f671
+
+-AUTHO - ADDED
+https://community.auth0.com/t/can-i-add-email-address-to-the-access-token-when-calling-an-api/70163
+
+-TAILWIND CSS - ADDED
+https://tailwindcss.com/
+
+-DAISY UI - ADDED
+https://daisyui.com/
