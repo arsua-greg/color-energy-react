@@ -24,7 +24,8 @@
     "**/*.tsx",
     "src/pages/_app.tsx",
     "src/pages/index.tsx",
-    "src/components/UserInformation.tsx"
+    "src/components/UserInformation.tsx",
+    "src/components/ReservationForm.js"
   ],
   "exclude": ["node_modules"]
 }
