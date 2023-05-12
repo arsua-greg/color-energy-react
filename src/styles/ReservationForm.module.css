@@ -1,5 +1,8 @@
-.psuedo::before {
+.psuedo::after {
   content: "名";
   position: absolute;
-  right: 0;
+  right: 40px;
+  width: auto;
+  top: 50%;
+  transform: translate(0%, -50%);
 }
