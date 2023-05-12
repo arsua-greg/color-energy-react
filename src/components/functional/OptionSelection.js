@@ -1,9 +1,11 @@
 import { Fragment, useState } from "react";
 
-export default function OptionSelection() {
+export default function OptionSelection({ onCheckboxChange }) {
   const [isChecked, setIsChecked] = useState(false);
 
-  function handleChange() {
+  function handleCheckboxChange(e) {
+    const checked = e.target.checked;
+    onCheckboxChange(checked);
     setIsChecked(!isChecked);
   }
 
@@ -57,7 +59,7 @@ export default function OptionSelection() {
             <input
               type="checkbox"
               className="checkbox rounded border border-[#8E8E8E] bg-white w-6 h-6"
-              onChange={handleChange}
+              onChange={handleCheckboxChange}
             />
             <div className="flex items-center md:px-6 px-4">
               <p className="md:pr-7 pr-4">IMAGE</p>
