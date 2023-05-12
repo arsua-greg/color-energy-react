@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import Button from "../../components/ui/Button";
 import OptionSelection from "../../components/functional/OptionSelection";
+import styles from "../../styles/ReservationForm.module.css";
 
 export default function ReservationPage() {
   const [count, setCount] = useState(0);
@@ -16,9 +17,9 @@ export default function ReservationPage() {
 
   return (
     <Fragment>
-      <div className="max-w-[1120px] mx-auto md:mt-16 mt-8">
-        <div className="border-b border-[#D9D9D9] md:pb-10 pb-6">
-          <div className="md:px-0 px-5">
+      <div className="max-w-[1120px] mx-auto md:mt-16 mt-8 lg:px-5 px-0">
+        <div className="border-b border-[#D9D9D9] md:pb-10 pb-6 lg:px-0 px-5">
+          <div className="md:px-0">
             <h1 className="font-bold md:text-3xl text-xl">
               しゃぶ葉 渋谷駅前店
             </h1>
@@ -27,7 +28,9 @@ export default function ReservationPage() {
                 <div className="w-1/2">
                   <p className="font-xl">人数</p>
                 </div>
-                <div className="text-center">
+                <div
+                  className={`${styles.psuedo} text-center relative flex items-center`}
+                >
                   <button
                     className="btn bg-[#04512A] border-0 p-0 text-sm min-h-0 h-6 w-6 rounded-[4px] items-start"
                     onClick={decrementCount}
@@ -35,7 +38,7 @@ export default function ReservationPage() {
                     <p className="text-white text-xl leading-none">-</p>
                   </button>
                   <input
-                    className="bg-transparent text-center text-lg w-[94px] appearance-none relative"
+                    className="bg-transparent text-center text-lg w-[94px] appearance-none outline-none"
                     type="number"
                     name="number"
                     id="number"
@@ -53,7 +56,7 @@ export default function ReservationPage() {
               <div className="flex md:w-1/2 md:bg-[#EDEDED] justify-between p-5 md:ml-3">
                 <p className="font-xl">時間</p>
                 <select
-                  className="bg-white border border-[#8E8E8E] rounded md:max-w-[412px] w-1/2 pl-6 text-base"
+                  className="bg-white border border-[#8E8E8E] rounded md:max-w-[412px] w-1/2 md:pl-6 text-base"
                   name="time"
                   id=""
                   onChange={(e) => e.target.value}
@@ -67,7 +70,7 @@ export default function ReservationPage() {
               </div>
             </div>
           </div>
-          <p className="md:text-lg text-sm md:mt-14 mt-9 md:px-0 px-5">
+          <p className="md:text-lg text-sm md:mt-14 mt-9 md:px-0">
             席のみのご予約となります。コースの選択については店舗にご来店後、各テーブルにてお伝えください。
           </p>
         </div>

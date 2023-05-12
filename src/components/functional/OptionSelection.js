@@ -8,25 +8,25 @@ export default function OptionSelection() {
   }
 
   const advancedOptions = isChecked ? (
-    <div className="mb-16 md:px-0 px-5">
+    <div className="mb-16 lg:px-0 px-5">
       <p className="md:text-lg text-sm">
         このオプションは以下の詳細設定が可能です。
       </p>
       <div className="md:flex mt-4">
-        <div className="md:w-1/2 flex md:bg-[#EDEDED] p-5 justify-between md:mr-3">
+        <div className="md:w-1/2 flex items-center md:bg-[#EDEDED] md:p-5 justify-between md:mr-3 md:mb-0 mb-4">
           <p className="text-lg">提供方法</p>
           <select
-            className="bg-white border border-[#8E8E8E] rounded md:max-w-[328px] w-[175px]"
+            className="bg-white border border-[#8E8E8E] rounded md:max-w-[328px] w-[175px] p-1.5"
             name=""
             id=""
           >
             <option value="ネコロボ">ネコロボ</option>
           </select>
         </div>
-        <div className="md:w-1/2 flex md:bg-[#EDEDED] p-5 justify-between md:ml-3">
+        <div className="md:w-1/2 flex items-center md:bg-[#EDEDED] md:p-5 justify-between md:ml-3">
           <p className="text-lg">提供時間</p>
           <select
-            className="bg-white border border-[#8E8E8E] rounded md:max-w-[328px] w-[175px]"
+            className="bg-white border border-[#8E8E8E] rounded md:max-w-[328px] w-[175px] p-1.5"
             name=""
             id=""
           >
@@ -59,7 +59,7 @@ export default function OptionSelection() {
               className="checkbox rounded border border-[#8E8E8E] bg-white w-6 h-6"
               onChange={handleChange}
             />
-            <div className="flex items-center px-6">
+            <div className="flex items-center md:px-6 px-4">
               <p className="md:pr-7 pr-4">IMAGE</p>
               <div>
                 <p className="md:text-lg text-[13px] font-bold">
