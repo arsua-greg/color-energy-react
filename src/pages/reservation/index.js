@@ -5,7 +5,6 @@ import styles from "../../styles/ReservationForm.module.css";
 
 export default function ReservationPage() {
   const [count, setCount] = useState(0);
-  const [isChecked, setIsChecked] = useState(false);
 
   const decrementCount = () => {
     setCount(count - 1);
