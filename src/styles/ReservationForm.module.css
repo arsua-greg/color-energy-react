@@ -1,0 +1,5 @@
+.psuedo::before {
+  content: "名";
+  position: absolute;
+  right: 0;
+}
