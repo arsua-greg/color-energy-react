@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 
-import Header from "../ui/Header";
-import Footer from "../ui/Footer";
+import Header from "../page/Header";
+import Footer from "../page/Footer";
 
 export default function Layout(props) {
   return (
