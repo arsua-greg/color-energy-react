@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import Button from "./page/Button";
+import Button from "./ui/Button";
 import Notes from "../pages/reservation/notes";
 
 export default function ReservationForm() {

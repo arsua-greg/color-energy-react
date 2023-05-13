@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import Button from "../../components/page/Button";
+import Button from "../../components/ui/Button";
 import OptionSelection from "../../components/functional/OptionSelection";
 import styles from "../../styles/ReservationForm.module.css";
 
