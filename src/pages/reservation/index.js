@@ -13,16 +13,8 @@ export default function ReservationPage() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("submitted");
+    console.log("clicked");
   }
-
-  const decrementCount = () => {
-    setCount(count - 1);
-  };
-
-  const incrementCount = () => {
-    setCount(count + 1);
-  };
 
   return (
     <Fragment>
@@ -43,7 +35,7 @@ export default function ReservationPage() {
                   >
                     <button
                       className="btn bg-[#04512A] border-0 p-0 text-sm min-h-0 h-6 w-6 rounded-[4px] items-start"
-                      onClick={decrementCount}
+                      onClick={() => setCount(count - 1)}
                     >
                       <p className="text-white text-xl leading-none">-</p>
                     </button>
@@ -57,7 +49,7 @@ export default function ReservationPage() {
                     />
                     <button
                       className="btn bg-[#04512A] border-0 p-0 text-sm min-h-0 h-6 w-6 rounded-[4px] items-start"
-                      onClick={incrementCount}
+                      onClick={() => setCount(count + 1)}
                     >
                       <p className="text-white text-xl leading-none">+</p>
                     </button>
