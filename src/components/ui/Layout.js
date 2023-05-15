@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Inter } from "next/font/google";
-import Header from "../page/Header";
-import Footer from "../page/Footer";
+import Header from "../page/Header.page";
+import Footer from "../page/Footer.page";
 
 const inter = Inter({
   subsets: ["latin"],

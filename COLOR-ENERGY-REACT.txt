@@ -9,3 +9,34 @@ https://tailwindcss.com/
 
 -DAISY UI - ADDED
 https://daisyui.com/
+
+INSTRUCTIONS ON IMAGES
+
+- 01
+1.if you select the date, you can select the time.
+2.if you check the option, you can see the red area.
+
+-02
+Please don't stick the header to the top
+
+-03
+1.
+The default display is "2". Minimum value is "1", maximum value is "16 "
+Tap the "+" button to increase the number of people by 1, and tap the "-" button to decrease the number of people by 1.
+2.
+select list. Each item for 15 minutes from "11:00" to "18:00". Acquire and display by store and mapping when determining the date.
+※Get the calendar using the API. The time is also acquired at the same time and stored in the store. The API is prepared by Vietnam.
+Calendar style UI: input data is date type. Data display is for 3 months including the current month.
+
+・
+Tap "翌月" to change the calendar to the contents of the next month. Tap "先月" to change the calendar to the contents of the previous month.
+・If the contents of the calendar are outside the range for the next three months including the current month, make "翌月" or "先月" untappable (inactive).
+
+-04
+1.Displayed as OFF by default.
+2.Please use 2x image when you export image.( the cording size is same to the design)
+3.selectlist "1個" is displayed by default.  option list ”1個””2個””3個””4個”
+4.selectlist "ネコロボ" is displayed by default.  option list”ネコロボ””従業員”
+5.selectlist "15分後" is displayed by default.  option list”15分後””30分後””45分後”
+”60分後””その他”
+
