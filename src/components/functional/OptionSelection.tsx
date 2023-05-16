@@ -2,10 +2,14 @@ import { Fragment, useState } from "react";
 import AdvancedOptions from "./AdvancedOptions";
 import ProductList from "./ProductList";
 
+interface OptionSelectionProps {
+  onCheckboxChange: (checked: boolean) => void;
+}
+
 export default function OptionSelection() {
   const [isChecked, setIsChecked] = useState(false);
 
-  function productSelectionHandler() {
+  function selectProductHandler() {
     setIsChecked(!isChecked);
   }
 
@@ -21,7 +25,7 @@ export default function OptionSelection() {
           </span>
         </p>
         <p className="text-xs mt-3">※不要な場合はチェック無し。</p>
-        <ProductList onChangeCheckbox={productSelectionHandler} />
+        <ProductList onChangeCheckbox={selectProductHandler} />
       </div>
       {advancedOptions}
     </Fragment>

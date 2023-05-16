@@ -1,6 +1,13 @@
 import Image from "next/image";
+import ProductModal from "../ui/ProductModal";
 
-export default function ProductSelection({ onChangeCheckbox }) {
+interface ProductSelectionProps {
+  onChangeCheckbox: () => void;
+}
+
+export default function ProductList({
+  onChangeCheckbox,
+}: ProductSelectionProps) {
   return (
     <div className="rounded-lg shadow-[2px_2px_4px_3px_rgba(0,0,0,0.1)] mt-7 bg-white md:p-6 p-4 flex items-center justify-between">
       <div className="flex items-center">
@@ -28,9 +35,7 @@ export default function ProductSelection({ onChangeCheckbox }) {
           </div>
         </div>
       </div>
-      <button className="text-[#04512A] md:text-lg text-base underline underline-offset-2 self-center">
-        詳細
-      </button>
+      <ProductModal />
     </div>
   );
 }

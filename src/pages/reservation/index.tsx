@@ -1,20 +1,22 @@
-import { Fragment, useState } from "react";
-import Button from "../../components/ui/Button";
-import OptionSelection from "../../components/functional/OptionSelection";
 import styles from "../../styles/ReservationForm.module.css";
+import { Fragment, useState } from "react";
+import Button from "@/components/ui/Button";
+import OptionSelection from "../../components/functional/OptionSelection";
 import Link from "next/link";
 
 export default function ReservationPage() {
   const [count, setCount] = useState(2);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [selectedTime, setSelectedTime] = useState("選択してください");
 
-  function handleCheckboxChange(checked) {
-    setIsButtonDisabled(!checked);
-  }
-
-  function handleSubmit(e) {
+  function handleSubmit(e: any) {
     e.preventDefault();
     console.log("clicked");
+  }
+
+  function handleSelectChange(e: any) {
+    setSelectedTime(e.target.value);
+    setIsButtonDisabled(e.target.value === "選択してください");
   }
 
   return (
@@ -27,7 +29,7 @@ export default function ReservationPage() {
                 しゃぶ葉 渋谷駅前店
               </Link>
               <div className="md:flex md:mt-12 mt-6">
-                <div className="flex md:w-1/2 md:bg-[#EDEDED] justify-between md:p-5 p-0 md:mr-3">
+                <div className="flex items-center md:w-1/2 md:bg-[#EDEDED] justify-between md:p-5 p-0 md:mr-3">
                   <div className="w-1/2">
                     <p className="font-xl">人数</p>
                   </div>
@@ -60,17 +62,17 @@ export default function ReservationPage() {
                     </button>
                   </div>
                 </div>
-                <div className="flex md:w-1/2 md:bg-[#EDEDED] justify-between md:p-5 p-0 md:ml-3 mt-5 md:mt-0">
+                <div className="flex items-center md:w-1/2 md:bg-[#EDEDED] justify-between md:p-5 p-0 md:ml-3 mt-5 md:mt-0">
                   <p className="font-xl">時間</p>
                   <select
-                    className="bg-white border border-[#8E8E8E] rounded md:max-w-[412px] w-1/2 md:pl-6 text-base"
+                    className="bg-white border border-[#8E8E8E] rounded md:max-w-[412px] w-1/2 md:pl-6 text-base py-2"
                     name="time"
                     id=""
-                    onChange={(e) => e.target.value}
+                    onChange={handleSelectChange}
                     defaultValue="選択してください"
                   >
                     <option disabled>選択してください</option>
-                    <option value="time1">Time 1</option>
+                    <option value="11:00">11:00</option>
                     <option value="time2">Time 2</option>
                     <option value="time3">Time 3</option>
                   </select>
@@ -81,7 +83,7 @@ export default function ReservationPage() {
               席のみのご予約となります。コースの選択については店舗にご来店後、各テーブルにてお伝えください。
             </p>
           </div>
-          <OptionSelection onCheckboxChange={handleCheckboxChange} />
+          <OptionSelection />
           <Button text="入力・確認画面に進む" isDisabled={isButtonDisabled} />
         </div>
       </form>

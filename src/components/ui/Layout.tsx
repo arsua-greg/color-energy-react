@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, ReactNode } from "react";
 import { Inter } from "next/font/google";
 import Header from "../page/Header.page";
 import Footer from "../page/Footer.page";
@@ -8,7 +8,11 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-export default function Layout(props) {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+export default function Layout(props: LayoutProps) {
   return (
     <Fragment>
       <Header />

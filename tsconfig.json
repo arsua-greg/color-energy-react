@@ -26,8 +26,10 @@
     "src/pages/index.tsx",
     "src/components/UserInformation.tsx",
     "src/components/ReservationForm.js",
-    "src/components/functional/OptionSelection.js",
-    "src/components/functional/SelectInput.js"
+    "src/components/functional/OptionSelection.tsx",
+    "src/components/functional/SelectInput.js",
+    "src/pages/reservation/completed.js",
+    "src/pages/reservation/notes.js"
   ],
   "exclude": ["node_modules"]
 }

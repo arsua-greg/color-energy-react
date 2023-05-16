@@ -1,6 +1,11 @@
 import { Fragment } from "react";
 
-export default function Button({ text, isDisabled }) {
+interface ButtonProps {
+  text: string;
+  isDisabled?: boolean;
+}
+
+export default function Button({ text, isDisabled }: ButtonProps) {
   return (
     <Fragment>
       <button

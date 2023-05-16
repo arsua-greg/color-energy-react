@@ -66,7 +66,7 @@ export default function AdvancedOptions() {
         className="bg-white rounded border border-[#757575] mt-7 p-3 max-w-[634px] w-full max-h-[132px] h-full text-sm"
         name=""
         id=""
-        rows="10"
+        rows={10}
         placeholder="オプションに関するご要望は、こちらに記載してください。"
       ></textarea>
     </div>
